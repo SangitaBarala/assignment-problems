@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>head n toss</title>
+</head>
+<body>
+<script>
+<!-- function consecutiveHead(n) -->
+<!-- { -->
+	<!-- var tosses=2*(Math.pow(2,n)-1) -->
+	<!-- return tosses -->
+	
+<!-- } -->
+<!-- document.write('number of tosses for two heads: '+consecutiveHead(2)) -->
+<!-- document.write('<br>') -->
+<!-- document.write('number of tosses for three heads: '+consecutiveHead(3)) -->
+<!-- document.write('<br>') -->
+<!-- document.write('number of tosses for four heads: '+consecutiveHead(4)) -->
+function consecutiveHead(numberNeeded)
+{
+	var heads=""
+	var total=0
+	
+	while(heads.length!=numberNeeded)
+	{
+		var turn=Math.floor((Math.random()*2))
+		
+		if(turn==1)
+		{
+			heads=heads+'Head'
+			document.write('heads<br>')
+		}
+		else
+		{
+			heads=""
+			document.write('Tails<br>')
+		}
+		
+		total=total+1
+		
+	}
+	document.write('It took'+total+'tosses to get'+numberNeeded+'consecutive head')
+	<!-- consecutiveHead(3) -->
+}
+</script>
+</body>
+</html>

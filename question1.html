@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>align values</title>
+</head>
+<body>
+<p>create table and set values according to alignment method</p>
+<script>
+	function alignLeft(value,width)
+	{
+		var newStr=value.toString()
+		if(width>newStr)
+		{
+			var count=width-newStr.length
+			newStr=newStr+"".repeat(count)
+		}
+		return newStr
+	}
+	function alignRight(value,width)
+	{
+		var newStr=value.toString()
+		if(width>newStr)
+		{
+			var count=width-newStr.length
+			newStr="".repeat(count)+newStr
+		}
+		return newStr
+	}
+	function alignCenter(value,width)
+	{
+		var newStr=value.toString()
+		if(width>newStr)
+		{
+			var count=(width-newStr.length)/2
+			newStr="".repeat(count)+newStr+"".repeat(Math.ceil(count))
+		}
+		return newStr
+	}
+	function table()
+	{
+		var setwidth=5
+		for(i=1; i<=10; i++)
+		{
+			var line=""
+			for(j=1; j<=10; j++)
+			{
+				line=line+alignRight(i*j,setwidth)
+			}
+			
+		}
+		console.log(line)
+	}
+	
+	
+	
+</script>
+</body>
+</html>
